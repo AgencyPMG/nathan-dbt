@@ -1,0 +1,46 @@
+analytics:
+  target: redshift-dev
+
+  outputs:
+    redshift-dev:
+      type: redshift
+      host: redshift.data.alliplatform.com
+      user: "{{ env_var('DWHUSER') }}"
+      pass: "{{ env_var('PGPASSWORD') }}"
+      port: 5439
+      dbname: datawarehouse
+      schema: dbt_{{ env_var('DBT_USER') }}
+      threads: 4
+
+    redshift-prod:
+      type: redshift
+      host: redshift.data.alliplatform.com
+      user: "{{ env_var('DWHUSER') }}"
+      pass: "{{ env_var('PGPASSWORD') }}"
+      port: 5439
+      dbname: datawarehouse
+      schema: surveymonkey_analytics
+
+    bigquery-dev:
+      type: bigquery
+      method: service-account
+      project: pmg-datawarehouse
+      dataset: dbt_{{ env_var('DBT_USER') }}
+      threads: 4
+      timeout_seconds: 300
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      location: US
+      priority: interactive
+      retries: 3
+
+    bigquery-prod:
+      type: bigquery
+      method: service-account
+      project: pmg-datawarehouse
+      dataset: surveymonkey_analytics
+      threads: 4
+      timeout_seconds: 300
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      location: US
+      priority: interactive
+      retries: 3
