@@ -34,15 +34,13 @@ models:
   my_new_project:
     archive:
       enabled: false
-    base:
+    1_base:
       materialized: ephemeral
-    channel:
-      materialized: view
-    core:
-      materialized: view
-    platform:
+    2_platform:
       materialized: table
-    report_queries:
+    3_channel:
+      materialized: view
+    4_report_queries:
       materialized: table
 
 on-run-end:

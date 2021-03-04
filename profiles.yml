@@ -19,7 +19,7 @@ analytics:
       pass: "{{ env_var('PGPASSWORD') }}"
       port: 5439
       dbname: datawarehouse
-      schema: surveymonkey_analytics
+      schema: clientname_analytics
 
     bigquery-dev:
       type: bigquery
@@ -37,7 +37,7 @@ analytics:
       type: bigquery
       method: service-account
       project: pmg-datawarehouse
-      dataset: surveymonkey_analytics
+      dataset: clientname_analytics
       threads: 4
       timeout_seconds: 300
       keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
