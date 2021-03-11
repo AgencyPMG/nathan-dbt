@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: surveymonkey
-    schema: surveymonkey
-
-    tables:
-      - name: adwords_insights_ad
