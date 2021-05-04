@@ -1,53 +1,8 @@
 version: 2
 
 sources:
-  - name: analytics_team
-    schema: analytics_team
-
-
-    tables:
-      - name: surveymonkey__search_adwords_ddl
-      - name: surveymonkey__search_bing_ddl
-
   - name: surveymonkey
     schema: surveymonkey
 
     tables:
-      - name: search_sa360_keyword
       - name: adwords_insights_ad
-      - name: gdrive_fee_schedule
-      - name: cm_basic
-      - name: categorization_override_dcm
-      - name: display_dv360_email
-      - name: cm_placement_refs
-      - name: display_criteo_custom_report
-      - name: display_historical
-      - name: display_trade_desk
-      - name: cm_floodlight_9615939
-      - name: floodlight_references
-      - name: exchange_rates
-      - name: package_id_reference
-      - name: linkedin_insights_creative
-      - name: li_creativeperf
-      - name: gdrive_accountname_decodes
-      - name: social_linkedin_campaign_conversions_complete
-      - name: bing_insights_ad
-      - name: search_historical_conversion_types_google_ads
-      - name: search_historical_conversion_types_bing
-      - name: search_engine_conversion_name_references
-      - name: sa360_campaign
-      - name: gdrive_surveymonkey_country_ref
-      - name: gdrive_categorization_override_linkedin
-      - name: gdrive_social_linkedin_conversion_types_reference
-      - name: social_facebook_ads_1
-      - name: social_facebook_custom_conversions_complete
-      - name: social_facebook_conversion_types_reference_complete
-      - name: salesforce_opportunities
-      - name: salesforce_leads
-      - name: gdrive_surveymonkey_country_ref_salesforce
-      - name: mta_osa_core_paidconversion_and_bookings
-      - name: mta_osa_audience_transactions_booking_revenue
-      - name: budget_goal_inputs
-      - name: nonfiscalcalendar
-      - name: mta_osa_core_freesignup
-      - name: capterra
